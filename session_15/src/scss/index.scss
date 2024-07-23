@@ -1,0 +1,17 @@
+@import "reset";
+@import "colors";
+@import "font-size";
+@import "height";
+@import "margin";
+@import "paddding";
+@import "width";
+@import "utility";
+
+
+@each $key, $value in $colors {
+    @for $i from 1 through 9 {
+        .color-#{$key}-#{$i}00 {
+            color: darken($value, $i * 5%);
+        }
+    }
+}
