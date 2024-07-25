@@ -1,0 +1,13 @@
+<div *ngIf="task">
+    <h1>Edit Task</h1>
+    <form (ngSubmit)="editTask()">
+      <label for="title">Title:</label>
+      <input id="title" [(ngModel)]="task.title" name="title" required>
+      <br>
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="task.description" name="description" required></textarea>
+      <br>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+  
