@@ -1,0 +1,11 @@
+<div class="max-w-[1500px] ml-auto mr-auto py-5">
+    <div class="flex items-center justify-center mb-[50px]">
+      <input type="text" class="border-2 rounded-lg p-1 w-1/2" placeholder="search" [formControl]="searchControl" >
+      <button class="px-[9px] py-1 bg-blue-600 rounded-lg ml-3 text-white"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    <div class="grid grid-cols-4 gap-3">
+      <div *ngFor="let product of products">
+        <app-card [src]="product.images[0]" [title]="product.title" [description]="product.description" ></app-card>
+      </div>
+    </div>
+  </div>

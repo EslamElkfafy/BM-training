@@ -1,0 +1,15 @@
+<div class="h-[100vh] flex justify-center items-center bg-[#f0f8ff]">
+  <div class="rounded-lg p-5 shadow-[0_0_10px_rgba(0,0,0,0.1)] text-center bg-white">
+    <h1 class="text-3xl mb-5">Weather App</h1>
+    <div class="flex items-center gap-3">
+      <input type="text" class="border-[1px] border-black rounded-lg px-2 py-1" [(ngModel)]="inputText">
+      <button (click)="fetchData()" class="bg-[#007bff] text-white p-2 rounded-lg outline-none">Search</button>
+    </div>
+    <div class="text-start" *ngIf="isVisiable">
+      <p>name: {{name}}</p>
+      <p>temp: {{temp}}</p>
+      <p>humidity: {{humidity}}</p>
+      <p>description: {{description}}</p>
+    </div>
+  </div>
+</div>
